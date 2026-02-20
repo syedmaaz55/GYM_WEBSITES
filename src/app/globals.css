@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Ye code har cheez ko override kar dega */
+html, body {
+  scrollbar-color: #AC0000 #000000 !important; /* Firefox ke liye */
+  scrollbar-width: auto !important;
+}
+
+/* Chrome, Edge, aur Safari ke liye */
+::-webkit-scrollbar {
+  width: 14px !important; /* Thora aur mota kiya taake nazar aaye */
+  display: block !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #AC0000 !important; 
+  border-radius: 10px !important;
+  border: 3px solid #000000 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF0000 !important;
+}
+
+
+nextjs-portal {
+  display: none !important;
+}
