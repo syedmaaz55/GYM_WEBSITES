@@ -18,7 +18,7 @@ const Footer = () => {
                         {/* Yahan hum Image tag use karenge */}
                         <div className="relative w-12 h-12 md:w-14 md:h-14 overflow-hidden transform group-hover:scale-110 transition-all duration-500">
                             <img
-                                src="/images/logo.jpg" // Aapka logo file path [cite: 2025-12-28]
+                                src="/images/logo.webp" // Aapka logo file path [cite: 2025-12-28]
                                 alt="Body Evolution Logo"
                                 className="object-contain w-full h-full"
                             />
