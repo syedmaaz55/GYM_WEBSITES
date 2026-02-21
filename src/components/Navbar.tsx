@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Image component import kiya [cite: 2025-12-28]
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronRight } from 'lucide-react';
 
@@ -10,7 +10,8 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  const brandRed = "#AC0000";
+  // Red se badal kar Green kar diya
+  const brandGreen = "#73BB1B"; 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Trainers', href: '/trainers' },
-    { name: 'Membership', href: '/membership' },
+    { name: 'Schedule', href: '/schedule' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -37,11 +38,11 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         
-        {/* --- LOGO SECTION (IMAGE UPDATED) --- */}
+        {/* --- LOGO SECTION --- */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12 md:w-16 md:h-16 transition-transform duration-500 group-hover:scale-110">
             <Image 
-              src="/images/logo.webp" // Aapki logo file ka path [cite: 2025-12-28]
+              src="/images/image.webp" 
               alt="Body Evolution Logo"
               fill
               className="object-contain"
@@ -50,7 +51,7 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col leading-none">
             <span className="text-xl md:text-2xl font-black italic tracking-tighter text-white uppercase">
-              BODY <span style={{ color: brandRed }}>EVOLUTION</span>
+              BODY <span style={{ color: brandGreen }}>EVOLUTION</span>
             </span>
             <span className="text-[10px] text-zinc-500 tracking-[3px] font-bold uppercase">Ultimate Fitness</span>
           </div>
@@ -62,8 +63,8 @@ const Navbar = () => {
             <Link 
               key={link.name} 
               href={link.href}
-              className={`text-[13px] font-bold uppercase tracking-widest transition-all duration-300 hover:text-[#AC0000] ${
-                pathname === link.href ? 'text-[#AC0000]' : 'text-white/80'
+              className={`text-[13px] font-bold uppercase tracking-widest transition-all duration-300 hover:text-[#73BB1B] ${
+                pathname === link.href ? 'text-[#73BB1B]' : 'text-white/80'
               }`}
             >
               {link.name}
@@ -72,7 +73,7 @@ const Navbar = () => {
           
           <Link 
             href="/contact" 
-            className="px-8 py-3 font-black text-xs uppercase tracking-widest bg-[#AC0000] text-white rounded-sm hover:bg-white hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(172,0,0,0.3)]"
+            className="px-8 py-3 font-black text-xs uppercase tracking-widest bg-[#73BB1B] text-white rounded-sm hover:bg-white hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(115,187,27,0.3)]"
           >
             Join Now
           </Link>
@@ -98,16 +99,16 @@ const Navbar = () => {
               href={link.href}
               onClick={() => setIsOpen(false)}
               className={`text-4xl font-black uppercase italic tracking-tighter flex items-center gap-4 ${
-                pathname === link.href ? 'text-[#AC0000]' : 'text-white'
+                pathname === link.href ? 'text-[#73BB1B]' : 'text-white'
               }`}
             >
-              {link.name} <ChevronRight size={30} className="text-[#AC0000]" />
+              {link.name} <ChevronRight size={30} className="text-[#73BB1B]" />
             </Link>
           ))}
           <Link 
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className="mt-6 bg-[#AC0000] text-white px-10 py-4 font-black text-xl uppercase italic"
+            className="mt-6 bg-[#73BB1B] text-white px-10 py-4 font-black text-xl uppercase italic"
           >
             GET STARTED
           </Link>

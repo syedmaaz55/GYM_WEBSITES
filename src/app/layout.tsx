@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   
   // Ye rahi Favicon ki line jo missing thi
   icons: {
-    icon: "/images/logo.ico", // Ye file aapne 'public' folder mein rakhni hai [cite: 2026-02-20]
+    icon: "/images/image.ico", // Ye file aapne 'public' folder mein rakhni hai [cite: 2026-02-20]
   },
 
   openGraph: {
@@ -67,7 +67,7 @@ export default function RootLayout({
         <div className="lg:hidden fixed bottom-0 w-full p-4 bg-black/80 backdrop-blur-xl z-[100] border-t border-white/10">
           <a 
             href="/contact" 
-            className="block w-full bg-[#AC0000] text-center py-5 font-black uppercase italic tracking-tighter text-white shadow-[0_0_25px_rgba(172,0,0,0.3)] active:scale-95 transition-all"
+            className="block w-full bg-[#73BB1B] text-center py-5 font-black uppercase italic tracking-tighter text-white shadow-[0_0_25px_rgba(172,0,0,0.3)] active:scale-95 transition-all"
           >
             Join Now - Free Trial
           </a>

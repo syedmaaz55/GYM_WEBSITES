@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { Dumbbell, Phone, Mail, MapPin, Facebook, Instagram, Youtube, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
-    const brandRed = "#AC0000";
+    // Brand color changed to Green
+    const brandGreen = "#73BB1B";
     const currentYear = new Date().getFullYear();
 
     return (
@@ -15,10 +16,9 @@ const Footer = () => {
                 <div className="flex flex-col gap-6">
                     {/* LOGO SECTION */}
                     <Link href="/" className="flex items-center gap-3 group">
-                        {/* Yahan hum Image tag use karenge */}
                         <div className="relative w-12 h-12 md:w-14 md:h-14 overflow-hidden transform group-hover:scale-110 transition-all duration-500">
                             <img
-                                src="/images/logo.webp" // Aapka logo file path [cite: 2025-12-28]
+                                src="/images/image.webp"
                                 alt="Body Evolution Logo"
                                 className="object-contain w-full h-full"
                             />
@@ -26,7 +26,7 @@ const Footer = () => {
 
                         <div className="flex flex-col leading-none">
                             <span className="text-xl md:text-2xl font-black italic tracking-tighter text-white uppercase">
-                                BODY <span style={{ color: brandRed }}>EVOLUTION</span>
+                                BODY <span style={{ color: brandGreen }}>EVOLUTION</span>
                             </span>
                             <span className="text-[10px] text-zinc-500 tracking-[3px] font-bold uppercase">Ultimate Fitness</span>
                         </div>
@@ -35,13 +35,13 @@ const Footer = () => {
                         Pakistan's premier fitness destination. We are dedicated to pushing your limits and evolving your physical potential through expert coaching and state-of-the-art facilities.
                     </p>
                     <div className="flex gap-4">
-                        <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-[#AC0000] transition-all text-white">
+                        <a href="#" className={`w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-[${brandGreen}] transition-all text-white`}>
                             <Facebook size={18} />
                         </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-[#AC0000] transition-all text-white">
+                        <a href="#" className={`w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-[${brandGreen}] transition-all text-white`}>
                             <Instagram size={18} />
                         </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-[#AC0000] transition-all text-white">
+                        <a href="#" className={`w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-[${brandGreen}] transition-all text-white`}>
                             <Youtube size={18} />
                         </a>
                     </div>
@@ -53,7 +53,7 @@ const Footer = () => {
                     <ul className="flex flex-col gap-4">
                         {['Home', 'About', 'Trainers', 'Schedule', 'Membership'].map((item) => (
                             <li key={item}>
-                                <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-zinc-500 hover:text-[#AC0000] text-sm flex items-center gap-2 transition-colors group">
+                                <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className={`text-zinc-500 hover:text-[${brandGreen}] text-sm flex items-center gap-2 transition-colors group`}>
                                     <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-all" />
                                     {item}
                                 </Link>
@@ -79,15 +79,15 @@ const Footer = () => {
                     <h4 className="text-white font-black uppercase italic tracking-widest mb-6 text-sm">Visit Club</h4>
                     <ul className="flex flex-col gap-5">
                         <li className="flex items-start gap-3 text-zinc-400 text-sm">
-                            <MapPin size={20} className="text-[#AC0000] shrink-0" />
+                            <MapPin size={20} style={{ color: brandGreen }} className="shrink-0" />
                             <span>Plot 123, Block A, Fitness Street, <br /> Karachi, Pakistan</span>
                         </li>
                         <li className="flex items-center gap-3 text-zinc-400 text-sm">
-                            <Phone size={18} className="text-[#AC0000] shrink-0" />
+                            <Phone size={18} style={{ color: brandGreen }} className="shrink-0" />
                             <span>+92 300 1234567</span>
                         </li>
                         <li className="flex items-center gap-3 text-zinc-400 text-sm">
-                            <Mail size={18} className="text-[#AC0000] shrink-0" />
+                            <Mail size={18} style={{ color: brandGreen }} className="shrink-0" />
                             <span>info@bodyevolution.com</span>
                         </li>
                     </ul>

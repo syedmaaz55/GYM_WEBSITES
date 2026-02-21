@@ -1,5 +1,18 @@
+"use client";
+import React from "react";
 import Link from "next/link";
 import { CheckCircle2, Dumbbell, Target, Award, Zap, Heart, MoveRight, ShieldCheck } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+
+// --- Animation Definition (Red line fix) ---
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: "easeOut" } 
+  }
+};
 
 const services = [
   {
@@ -7,7 +20,7 @@ const services = [
     description: "Focus on compound movements and progressive overload to build maximum power and muscle density.",
     benefits: ["Increased Muscle Mass", "Improved Bone Density", "Enhanced Athletic Power"],
     icon: <Dumbbell size={40} />,
-    color: "from-red-900/20 to-black"
+    color: "from-[#73BB1B]/20 to-black"
   },
   {
     title: "Weight Loss Programs",
@@ -21,7 +34,7 @@ const services = [
     description: "Work 1-on-1 with elite coaches for a personalized roadmap and dedicated form correction.",
     benefits: ["Custom Workout Plans", "Form Correction", "Nutritional Coaching"],
     icon: <Award size={40} />,
-    color: "from-red-900/20 to-black"
+    color: "from-[#73BB1B]/20 to-black"
   },
   {
     title: "Group Classes",
@@ -35,7 +48,7 @@ const services = [
     description: "The work doesn't stop in the gym. Get precision meal plans designed to fuel your specific goals.",
     benefits: ["Tailored Meal Plans", "Macro Tracking", "Sustainable Results"],
     icon: <Target size={40} />,
-    color: "from-red-900/20 to-black"
+    color: "from-[#73BB1B]/20 to-black"
   },
   {
     title: "Crossfit & MMA",
@@ -53,28 +66,39 @@ export default function ServicesPage() {
       {/* --- HEADER --- */}
       <section className="py-24 px-6 text-center bg-gradient-to-b from-zinc-900 to-black relative">
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5"></div>
-        <h1 className="text-6xl md:text-9xl font-black uppercase italic tracking-tighter mb-4 relative z-10">
-          ELITE <span className="text-[#AC0000]">SERVICES</span>
-        </h1>
-        <p className="text-zinc-500 uppercase tracking-[5px] font-bold text-xs md:text-sm relative z-10">
-          Precision Training. Professional Excellence.
-        </p>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+        >
+          <h1 className="text-6xl md:text-9xl font-black uppercase italic tracking-tighter mb-4 relative z-10">
+            ELITE <span className="text-[#73BB1B]">SERVICES</span>
+          </h1>
+          <p className="text-zinc-500 uppercase tracking-[5px] font-bold text-xs md:text-sm relative z-10">
+            Precision Training. Professional Excellence.
+          </p>
+        </motion.div>
       </section>
 
-      {/* --- SERVICES GRID (Now 3x2 Balanced Grid) --- */}
+      {/* --- SERVICES GRID --- */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
+            <motion.div 
               key={index} 
-              className={`relative bg-gradient-to-br ${service.color} border border-white/5 rounded-3xl p-10 flex flex-col h-full group hover:border-[#AC0000]/50 transition-all duration-500 shadow-2xl overflow-hidden`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              transition={{ delay: index * 0.1 }}
+              className={`relative bg-gradient-to-br ${service.color} border border-white/5 rounded-3xl p-10 flex flex-col h-full group hover:border-[#73BB1B]/50 transition-all duration-500 shadow-2xl overflow-hidden`}
             >
               {/* Floating Icon Decoration */}
-              <div className="absolute -top-6 -right-6 text-white/5 group-hover:text-[#AC0000]/10 transition-colors transform group-hover:rotate-12 duration-700">
+              <div className="absolute -top-6 -right-6 text-white/5 group-hover:text-[#73BB1B]/10 transition-colors transform group-hover:rotate-12 duration-700">
                 {service.icon}
               </div>
 
-              <div className="text-[#AC0000] mb-8 bg-black/40 w-16 h-16 flex items-center justify-center rounded-2xl border border-white/10 group-hover:scale-110 group-hover:bg-[#AC0000] group-hover:text-white transition-all duration-500">
+              <div className="text-[#73BB1B] mb-8 bg-black/40 w-16 h-16 flex items-center justify-center rounded-2xl border border-white/10 group-hover:scale-110 group-hover:bg-[#73BB1B] group-hover:text-white transition-all duration-500">
                 {service.icon}
               </div>
 
@@ -91,7 +115,7 @@ export default function ServicesPage() {
                 <p className="text-white font-black uppercase italic text-[10px] tracking-widest mb-4 opacity-50">Core Benefits:</p>
                 {service.benefits.map((benefit, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 size={16} className="text-[#AC0000]" />
+                    <CheckCircle2 size={16} className="text-[#73BB1B]" />
                     <span className="text-zinc-300 text-xs font-bold uppercase tracking-wider">{benefit}</span>
                   </div>
                 ))}
@@ -100,28 +124,33 @@ export default function ServicesPage() {
               {/* Action Button */}
               <Link 
                 href="/contact" 
-                className="group/btn flex items-center justify-between bg-white text-black px-6 py-4 rounded-xl font-black uppercase italic text-xs tracking-widest hover:bg-[#AC0000] hover:text-white transition-all duration-300"
+                className="group/btn flex items-center justify-between bg-white text-black px-6 py-4 rounded-xl font-black uppercase italic text-xs tracking-widest hover:bg-[#73BB1B] hover:text-white transition-all duration-300"
               >
                 Join Program
                 <div className="bg-black text-white group-hover/btn:bg-white group-hover/btn:text-black p-1 rounded-sm transition-colors">
                   <MoveRight size={16} />
                 </div>
               </Link>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
 
       {/* --- CTA SECTION --- */}
       <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto bg-[#AC0000] rounded-[40px] p-12 text-center relative overflow-hidden group shadow-[0_0_50px_rgba(172,0,0,0.3)]">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto bg-[#73BB1B] rounded-[40px] p-12 text-center relative overflow-hidden group shadow-[0_0_50px_rgba(115,187,27,0.3)]"
+        >
            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity"></div>
            <h3 className="text-4xl md:text-6xl font-black uppercase italic text-white mb-6 relative z-10 leading-none">Not sure where to start?</h3>
            <p className="text-white/90 font-bold uppercase tracking-[3px] mb-10 text-xs relative z-10">Get a free expert consultation today.</p>
            <Link href="/contact" className="inline-block bg-white text-black px-12 py-5 font-black uppercase italic rounded-full hover:scale-105 transition-transform relative z-10 shadow-xl">
-              Book Free Consultation
+             Book Free Consultation
            </Link>
-        </div>
+        </motion.div>
       </section>
 
     </main>
