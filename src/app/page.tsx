@@ -100,11 +100,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-zinc-500">
-          <span className="text-[10px] uppercase font-bold tracking-widest">Scroll</span>
-          <div className="w-[2px] h-12 bg-gradient-to-b from-[#73BB1B] to-transparent"></div>
-        </div>
+
       </section>
 
       {/* --- FEATURES GRID --- */}
