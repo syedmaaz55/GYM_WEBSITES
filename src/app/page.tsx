@@ -34,9 +34,9 @@ const plans = [
     popular: false
   }
 ];
+
 export default function Home() {
   return (
-
     <div className="flex flex-col w-full  overflow-hidden">
 
       {/* --- HERO SECTION --- */}
@@ -44,7 +44,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/slider.webp"
+            src="/images/wow.webp"
             alt="Body Evolution Elite Training"
             fill
             className="object-cover object-center opacity-70"
@@ -60,8 +60,8 @@ export default function Home() {
 
             {/* Top Badge */}
             <div className="flex items-center gap-2 mb-6">
-              <span className="w-12 h-[2px] bg-[#73BB1B]"></span>
-              <span className="text-[#73BB1B] font-black uppercase tracking-[4px] text-xs md:text-sm">
+              <span className="w-12 h-[2px] bg-[#FF0000]"></span>
+              <span className="text-[#FF0000] font-black uppercase tracking-[4px] text-xs md:text-sm">
                 Best Fitness Hub in Karachi
               </span>
             </div>
@@ -69,7 +69,7 @@ export default function Home() {
             {/* Main Headline */}
             <h1 className="text-6xl md:text-8xl lg:text-[110px] font-black uppercase italic leading-[0.9] tracking-tighter text-white mb-6">
               EVOLVE <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#73BB1B] to-green-700">YOURSELF</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0000] to-red-700">YOURSELF</span>
             </h1>
 
             {/* Supporting Text */}
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
               <Link
                 href="/contact"
-                className="group relative w-full sm:w-auto px-10 py-5 bg-[#73BB1B] text-white font-black uppercase italic overflow-hidden shadow-[0_0_30px_rgba(115,187,27,0.4)] transition-all hover:bg-white hover:text-black"
+                className="group relative w-full sm:w-auto px-10 py-5 bg-[#FF0000] text-white font-black uppercase italic overflow-hidden shadow-[0_0_30px_rgba(255,0,0,0.4)] transition-all hover:bg-white hover:text-black"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Join Now <MoveRight className="group-hover:translate-x-2 transition-transform" />
@@ -91,24 +91,22 @@ export default function Home() {
 
               <Link
                 href="/contact"
-                className="group w-full sm:w-auto px-10 py-5 border-2 border-white/20 hover:border-[#73BB1B] text-white font-black uppercase italic flex items-center justify-center gap-2 transition-all"
+                className="group w-full sm:w-auto px-10 py-5 border-2 border-white/20 hover:border-[#FF0000] text-white font-black uppercase italic flex items-center justify-center gap-2 transition-all"
               >
-                <Play size={18} className="fill-white group-hover:fill-[#73BB1B] group-hover:text-[#73BB1B] transition-colors" />
+                <Play size={18} className="fill-white group-hover:fill-[#FF0000] group-hover:text-[#FF0000] transition-colors" />
                 Book Free Trial
               </Link>
             </div>
           </div>
         </div>
-
-
       </section>
 
       {/* --- FEATURES GRID --- */}
       <section className="py-24 px-6 bg-[#050505]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="flex gap-5 group">
-            <div className="shrink-0 w-16 h-16 bg-zinc-900 flex items-center justify-center border border-white/5 group-hover:border-[#73BB1B] transition-all">
-              <Dumbbell className="text-[#73BB1B]" size={32} />
+            <div className="shrink-0 w-16 h-16 bg-zinc-900 flex items-center justify-center border border-white/5 group-hover:border-[#FF0000] transition-all">
+              <Dumbbell className="text-[#FF0000]" size={32} />
             </div>
             <div>
               <h3 className="text-xl font-black uppercase italic mb-2 text-white">Modern Equipment</h3>
@@ -117,8 +115,8 @@ export default function Home() {
           </div>
 
           <div className="flex gap-5 group">
-            <div className="shrink-0 w-16 h-16 bg-zinc-900 flex items-center justify-center border border-white/5 group-hover:border-[#73BB1B] transition-all">
-              <Award className="text-[#73BB1B]" size={32} />
+            <div className="shrink-0 w-16 h-16 bg-zinc-900 flex items-center justify-center border border-white/5 group-hover:border-[#FF0000] transition-all">
+              <Award className="text-[#FF0000]" size={32} />
             </div>
             <div>
               <h3 className="text-xl font-black uppercase italic mb-2 text-white">Certified Trainers</h3>
@@ -127,8 +125,8 @@ export default function Home() {
           </div>
 
           <div className="flex gap-5 group">
-            <div className="shrink-0 w-16 h-16 bg-zinc-900 flex items-center justify-center border border-white/5 group-hover:border-[#73BB1B] transition-all">
-              <Target className="text-[#73BB1B]" size={32} />
+            <div className="shrink-0 w-16 h-16 bg-zinc-900 flex items-center justify-center border border-white/5 group-hover:border-[#FF0000] transition-all">
+              <Target className="text-[#FF0000]" size={32} />
             </div>
             <div>
               <h3 className="text-xl font-black uppercase italic mb-2 text-white">Personal Results</h3>
@@ -140,22 +138,22 @@ export default function Home() {
 
       {/* --- PREMIUM PERSONAL TRAINING --- */}
       <section className="py-24 px-6 bg-black relative overflow-hidden">
-        <div className="absolute top-1/2 -left-20 w-[400px] h-[400px] bg-[#73BB1B]/20 blur-[120px] rounded-full -z-10"></div>
+        <div className="absolute top-1/2 -left-20 w-[400px] h-[400px] bg-[#FF0000]/20 blur-[120px] rounded-full -z-10"></div>
 
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
           {/* --- LEFT SIDE: CONTENT AREA --- */}
           <div className="w-full lg:w-1/2 flex flex-col items-start order-2 lg:order-1">
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-[3px] bg-[#73BB1B]"></span>
-              <h4 className="text-[#73BB1B] font-black uppercase tracking-[5px] text-sm">Elevate Your Game</h4>
+              <span className="w-8 h-[3px] bg-[#FF0000]"></span>
+              <h4 className="text-[#FF0000] font-black uppercase tracking-[5px] text-sm">Elevate Your Game</h4>
             </div>
 
             <h2 className="text-5xl md:text-7xl font-black uppercase italic text-white leading-none tracking-tighter mb-8">
               PERSONAL <br />
               <span
                 className="text-transparent"
-                style={{ WebkitTextStroke: '1px #73BB1B' }}
+                style={{ WebkitTextStroke: '1px #FF0000' }}
               >
                 TRAINING
               </span>
@@ -170,18 +168,18 @@ export default function Home() {
             {/* Feature List */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full mb-12">
               <div className="flex items-center gap-4 bg-zinc-900/50 p-4 border border-white/5 rounded-xl">
-                <div className="text-[#73BB1B]"><Target size={24} /></div>
+                <div className="text-[#FF0000]"><Target size={24} /></div>
                 <span className="text-white font-bold uppercase text-xs italic tracking-widest">Custom Plans</span>
               </div>
               <div className="flex items-center gap-4 bg-zinc-900/50 p-4 border border-white/5 rounded-xl">
-                <div className="text-[#73BB1B]"><Dumbbell size={24} /></div>
+                <div className="text-[#FF0000]"><Dumbbell size={24} /></div>
                 <span className="text-white font-bold uppercase text-xs italic tracking-widest">Elite Gear</span>
               </div>
             </div>
 
             <Link
               href="/contact"
-              className="group flex items-center gap-6 bg-[#73BB1B] text-white pl-10 pr-4 py-4 font-black uppercase italic hover:bg-white hover:text-black transition-all duration-300"
+              className="group flex items-center gap-6 bg-[#FF0000] text-white pl-10 pr-4 py-4 font-black uppercase italic hover:bg-white hover:text-black transition-all duration-300"
             >
               Start Free Trial
               <div className="bg-black/20 group-hover:bg-black/10 p-2 rounded-sm transition-colors">
@@ -203,26 +201,26 @@ export default function Home() {
             </div>
 
             {/* Floating Stats Card 1 */}
-            <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-2xl shadow-[0_0_30px_rgba(115,187,27,0.15)] hidden sm:block group hover:border-[#73BB1B]/50 transition-all duration-500">
+            <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-2xl shadow-[0_0_30px_rgba(255,0,0,0.15)] hidden sm:block group hover:border-[#FF0000]/50 transition-all duration-500">
               <div className="flex items-center gap-4 relative">
-                <div className="absolute inset-0 bg-[#73BB1B]/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="relative z-10 w-12 h-12 bg-[#73BB1B] rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(115,187,27,0.4)]">
+                <div className="absolute inset-0 bg-[#FF0000]/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative z-10 w-12 h-12 bg-[#FF0000] rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(255,0,0,0.4)]">
                   <Award className="text-white" size={24} />
                 </div>
                 <div className="relative z-10">
                   <p className="text-white font-black text-2xl italic leading-none tracking-tighter">100%</p>
-                  <p className="text-[#73BB1B] font-bold uppercase text-[10px] tracking-[2px] mt-1">Result Oriented</p>
+                  <p className="text-[#FF0000] font-bold uppercase text-[10px] tracking-[2px] mt-1">Result Oriented</p>
                 </div>
               </div>
             </div>
 
             {/* Floating Stats Card 2 */}
-            <div className="absolute top-10 -right-4 md:-right-8 bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-2xl shadow-[0_0_30px_rgba(115,187,27,0.2)] hidden md:block group hover:border-[#73BB1B]/50 transition-all duration-500">
+            <div className="absolute top-10 -right-4 md:-right-8 bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-2xl shadow-[0_0_30px_rgba(255,0,0,0.2)] hidden md:block group hover:border-[#FF0000]/50 transition-all duration-500">
               <div className="relative">
-                <div className="absolute inset-0 bg-[#73BB1B]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-[#FF0000]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative z-10">
                   <p className="text-white font-black text-5xl leading-none italic mb-1 tracking-tighter">+10</p>
-                  <p className="text-[#73BB1B] font-bold uppercase text-[10px] tracking-[3px]">Elite Coaches</p>
+                  <p className="text-[#FF0000] font-bold uppercase text-[10px] tracking-[3px]">Elite Coaches</p>
                 </div>
               </div>
             </div>
@@ -241,7 +239,7 @@ export default function Home() {
           ].map((stat, i) => (
             <div key={i} className="flex flex-col gap-1">
               <span className="text-4xl md:text-6xl font-black text-white italic tracking-tighter">{stat.num}</span>
-              <span className="text-[#73BB1B] uppercase font-bold text-[10px] tracking-[4px]">{stat.label}</span>
+              <span className="text-[#FF0000] uppercase font-bold text-[10px] tracking-[4px]">{stat.label}</span>
             </div>
           ))}
         </div>
@@ -252,12 +250,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
-              <h4 className="text-[#73BB1B] font-black uppercase tracking-[5px] mb-4 text-sm">Our Expertise</h4>
+              <h4 className="text-[#FF0000] font-black uppercase tracking-[5px] mb-4 text-sm">Our Expertise</h4>
               <h2 className="text-5xl md:text-7xl font-black uppercase italic text-white leading-none tracking-tighter">
                 ELITE <span className="text-transparent" style={{ WebkitTextStroke: '1px white' }}>SERVICES</span>
               </h2>
             </div>
-            <Link href="/services" className="text-white font-bold uppercase tracking-widest text-xs border-b-2 border-[#73BB1B] pb-2 hover:text-[#73BB1B] transition-all">
+            <Link href="/services" className="text-white font-bold uppercase tracking-widest text-xs border-b-2 border-[#FF0000] pb-2 hover:text-[#FF0000] transition-all">
               View All Services
             </Link>
           </div>
@@ -271,8 +269,8 @@ export default function Home() {
               { title: "Nutrition Support", icon: <Award /> },
               { title: "Body Building", icon: <Dumbbell /> }
             ].map((service, idx) => (
-              <div key={idx} className="bg-zinc-900/40 border border-white/5 p-10 rounded-2xl group hover:bg-[#73BB1B] transition-all duration-500">
-                <div className="text-[#73BB1B] group-hover:text-white mb-6 transition-colors">
+              <div key={idx} className="bg-zinc-900/40 border border-white/5 p-10 rounded-2xl group hover:bg-[#FF0000] transition-all duration-500">
+                <div className="text-[#FF0000] group-hover:text-white mb-6 transition-colors">
                   {service.icon}
                 </div>
                 <h3 className="text-2xl font-black uppercase italic text-white mb-4">{service.title}</h3>
@@ -288,7 +286,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-black uppercase italic text-white tracking-tighter">
-              MEET THE <span className="text-[#73BB1B]">ELITE</span>
+              MEET THE <span className="text-[#FF0000]">ELITE</span>
             </h2>
             <p className="text-zinc-500 uppercase tracking-[4px] font-bold text-xs mt-4">Professional Coaches & Mentors</p>
           </div>
@@ -300,13 +298,13 @@ export default function Home() {
               { name: "Zain Malik", role: "MMA Conditioning", img: "/images/t4.webp" },
               { name: "Mustafa Ali", role: "Physique Expert", img: "/images/5t.webp" }
             ].map((trainer, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-2xl aspect-[3/4] border border-white/5 hover:border-[#73BB1B]/50 transition-all duration-500">
+              <div key={index} className="relative group overflow-hidden rounded-2xl aspect-[3/4] border border-white/5 hover:border-[#FF0000]/50 transition-all duration-500">
                 <Image src={trainer.img} alt={trainer.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform">
                   <h4 className="text-xl font-black uppercase italic text-white leading-none">{trainer.name}</h4>
-                  <p className="text-[#73BB1B] font-bold uppercase text-[10px] tracking-widest mt-2 flex items-center gap-2">
-                    <span className="w-4 h-[1px] bg-[#73BB1B]"></span>{trainer.role}
+                  <p className="text-[#FF0000] font-bold uppercase text-[10px] tracking-widest mt-2 flex items-center gap-2">
+                    <span className="w-4 h-[1px] bg-[#FF0000]"></span>{trainer.role}
                   </p>
                 </div>
               </div>
@@ -317,16 +315,16 @@ export default function Home() {
 
       {/* --- TESTIMONIALS SLIDER --- */}
       <section className="py-32 px-6 bg-black relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#73BB1B]/10 blur-[100px] rounded-full"></div>
+        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#FF0000]/10 blur-[100px] rounded-full"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="text-[#73BB1B] flex justify-center gap-1 mb-8">
+          <div className="text-[#FF0000] flex justify-center gap-1 mb-8">
             {[...Array(5)].map((_, i) => <Award key={i} size={20} />)}
           </div>
           <h3 className="text-white text-2xl md:text-4xl font-black italic uppercase leading-tight mb-10 tracking-tighter">
             "Body Evolution changed my life. In 6 months, I've seen more results than in 2 years of training alone."
           </h3>
           <div className="flex items-center justify-center gap-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#73BB1B] shadow-[0_0_15px_rgba(115,187,27,0.4)]">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#FF0000] shadow-[0_0_15px_rgba(255,0,0,0.4)]">
               <img src="/images/me.webp" alt="Ali Ahmed" className="w-full h-full object-cover" />
             </div>
             <div className="text-left">
@@ -342,7 +340,7 @@ export default function Home() {
         {/* --- HEADER --- */}
         <section className="py-24 px-6 text-center bg-[#050505]">
           <h1 className="text-6xl md:text-9xl font-black uppercase italic tracking-tighter mb-4">
-            CHOOSE YOUR <span className="text-[#73BB1B]">LEVEL</span>
+            CHOOSE YOUR <span className="text-[#FF0000]">LEVEL</span>
           </h1>
           <p className="text-zinc-500 uppercase tracking-[6px] font-bold text-xs md:text-sm">
             No Contracts. No Bullshit. Just Evolution.
@@ -356,17 +354,17 @@ export default function Home() {
               <div
                 key={index}
                 className={`relative flex flex-col p-10 rounded-[40px] border-2 transition-all duration-500 ${plan.popular
-                  ? "bg-zinc-900 border-[#73BB1B] scale-105 z-10 shadow-[0_0_50px_rgba(115,187,27,0.2)]"
+                  ? "bg-zinc-900 border-[#FF0000] scale-105 z-10 shadow-[0_0_50px_rgba(255,0,0,0.2)]"
                   : "bg-black border-white/10 hover:border-white/30"
                   }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#73BB1B] text-white px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#FF0000] text-white px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
                     Most Popular
                   </div>
                 )}
 
-                <div className="text-[#73BB1B] mb-6">{plan.icon}</div>
+                <div className="text-[#FF0000] mb-6">{plan.icon}</div>
                 <h3 className="text-2xl font-black uppercase italic mb-2">{plan.name}</h3>
                 <p className="text-zinc-500 text-sm mb-8 leading-relaxed">{plan.description}</p>
 
@@ -379,7 +377,7 @@ export default function Home() {
                 <div className="space-y-4 mb-12 flex-grow">
                   {plan.features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <CheckCircle2 size={18} className="text-[#73BB1B]" />
+                      <CheckCircle2 size={18} className="text-[#FF0000]" />
                       <span className="text-zinc-300 text-sm font-medium">{feature}</span>
                     </div>
                   ))}
@@ -387,8 +385,8 @@ export default function Home() {
 
                 {/* Join Button */}
                 <button className={`w-full py-5 rounded-2xl font-black uppercase italic tracking-widest transition-all ${plan.popular
-                  ? "bg-[#73BB1B] text-white hover:bg-white hover:text-black"
-                  : "bg-white text-black hover:bg-[#73BB1B] hover:text-white"
+                  ? "bg-[#FF0000] text-white hover:bg-white hover:text-black"
+                  : "bg-white text-black hover:bg-[#FF0000] hover:text-white"
                   }`}>
                   Select This Plan
                 </button>
@@ -397,13 +395,11 @@ export default function Home() {
           </div>
         </section>
 
-
-
       </main>
 
       {/* --- FINAL CTA SECTION --- */}
       <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto relative rounded-[40px] overflow-hidden bg-[#73BB1B] py-20 px-10 text-center">
+        <div className="max-w-7xl mx-auto relative rounded-[40px] overflow-hidden bg-[#FF0000] py-20 px-10 text-center">
           <div className="absolute inset-0 opacity-20 bg-[url('/images/pattern.png')] bg-repeat"></div>
           <div className="relative z-10">
             <h2 className="text-5xl md:text-8xl font-black uppercase italic text-white leading-none tracking-tighter mb-8">

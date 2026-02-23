@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Target, Eye, Award, CheckCircle2 } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
-// --- Animation definition (Is se red line nahi aayegi) ---
+// --- Animation definition ---
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { 
@@ -27,10 +27,10 @@ export default function AboutPage() {
           className="max-w-7xl mx-auto text-center"
         >
           <h1 className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter mb-4">
-            OUR <span className="text-[#73BB1B]">LEGACY</span>
+            OUR <span className="text-[#FF0000]">LEGACY</span>
           </h1>
           <p className="text-zinc-500 max-w-2xl mx-auto uppercase tracking-[3px] font-bold text-sm">
-            Body Evolution: Building the strongest version of you since 2020.
+            The Ultimate Muscle Gym: Building the strongest version of you since 2020.
           </p>
         </motion.div>
       </section>
@@ -47,7 +47,7 @@ export default function AboutPage() {
           >
             <Image 
               src="/images/56.webp" 
-              alt="Body Evolution Facility" 
+              alt="The Ultimate Muscle Gym Facility" 
               fill 
               className="object-cover"
             />
@@ -59,7 +59,7 @@ export default function AboutPage() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
-              className="text-4xl font-black uppercase italic mb-8 border-l-4 border-[#73BB1B] pl-6"
+              className="text-4xl font-black uppercase italic mb-8 border-l-4 border-[#FF0000] pl-6"
             >
               The Brand Story
             </motion.h2>
@@ -70,7 +70,7 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="text-zinc-400 text-lg leading-relaxed mb-6"
             >
-              Body Evolution was born out of a simple necessity: Karachi needed a space where 
+              The Ultimate Muscle Gym was born out of a simple necessity: Karachi needed a space where 
               science-based training meets raw, unadulterated intensity. We started with a 
               handful of dedicated athletes and grew into the city's premier fitness hub.
             </motion.p>
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 variants={fadeInUp}
                 className="bg-zinc-900/50 p-6 rounded-xl border border-white/5"
               >
-                <Target className="text-[#73BB1B] mb-4" size={32} />
+                <Target className="text-[#FF0000] mb-4" size={32} />
                 <h3 className="text-xl font-bold uppercase italic mb-2">Our Mission</h3>
                 <p className="text-zinc-500 text-sm">To empower individuals through elite coaching and a supportive community.</p>
               </motion.div>
@@ -105,7 +105,7 @@ export default function AboutPage() {
                 variants={fadeInUp}
                 className="bg-zinc-900/50 p-6 rounded-xl border border-white/5"
               >
-                <Eye className="text-[#73BB1B] mb-4" size={32} />
+                <Eye className="text-[#FF0000] mb-4" size={32} />
                 <h3 className="text-xl font-bold uppercase italic mb-2">Our Vision</h3>
                 <p className="text-zinc-500 text-sm">To be the gold standard of strength and conditioning in Pakistan.</p>
               </motion.div>
@@ -124,7 +124,7 @@ export default function AboutPage() {
             variants={fadeInUp}
             className="text-center text-4xl md:text-5xl font-black uppercase italic mb-16"
           >
-            Elite <span className="text-[#73BB1B]">Facilities</span>
+            Elite <span className="text-[#FF0000]">Facilities</span>
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -142,9 +142,9 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 variants={fadeInUp}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-center gap-4 bg-black p-6 border border-white/5 hover:border-[#73BB1B]/50 transition-all group"
+                className="flex items-center gap-4 bg-black p-6 border border-white/5 hover:border-[#FF0000]/50 transition-all group"
               >
-                <CheckCircle2 className="text-[#73BB1B] group-hover:scale-110 transition-transform" />
+                <CheckCircle2 className="text-[#FF0000] group-hover:scale-110 transition-transform" />
                 <span className="text-white font-bold uppercase text-sm tracking-wider">{feature}</span>
               </motion.div>
             ))}

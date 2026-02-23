@@ -26,7 +26,7 @@ body {
 }
 /* Ye code har cheez ko override kar dega */
 html, body {
-  scrollbar-color: #73BB1B #000000 !important; /* Firefox ke liye */
+  scrollbar-color: #FF0000 #000000 !important; /* Firefox ke liye */
   scrollbar-width: auto !important;
 }
 
@@ -41,13 +41,13 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #73BB1B !important; 
+  background: #FF0000 !important; 
   border-radius: 10px !important;
   border: 3px solid #000000 !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #73BB1B !important;
+  background: #FF0000 !important;
 }
 
 

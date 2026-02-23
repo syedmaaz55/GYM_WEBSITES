@@ -10,8 +10,8 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  // Red se badal kar Green kar diya
-  const brandGreen = "#73BB1B"; 
+  // Color changed from Green to Red
+  const brandRed = "#FF0000"; 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-[100] transition-all duration-500 ${
       scrolled 
-      ? 'bg-black/90 backdrop-blur-lg border-b border-white/10 py-2' 
+      ? 'bg-black/95 backdrop-blur-lg border-b border-white/10 py-2' 
       : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -42,8 +42,8 @@ const Navbar = () => {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12 md:w-16 md:h-16 transition-transform duration-500 group-hover:scale-110">
             <Image 
-              src="/images/image.webp" 
-              alt="Body Evolution Logo"
+              src="/images/logo.webp" // Ensure this is your new logo
+              alt="The Ultimate Muscle Gym Logo"
               fill
               className="object-contain"
               priority
@@ -51,9 +51,9 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col leading-none">
             <span className="text-xl md:text-2xl font-black italic tracking-tighter text-white uppercase">
-              BODY <span style={{ color: brandGreen }}>EVOLUTION</span>
+              ULTIMATE <span style={{ color: brandRed }}>MUSCLE</span>
             </span>
-            <span className="text-[10px] text-zinc-500 tracking-[3px] font-bold uppercase">Ultimate Fitness</span>
+            <span className="text-[10px] text-zinc-500 tracking-[3px] font-bold uppercase">The Elite Gym</span>
           </div>
         </Link>
 
@@ -63,8 +63,8 @@ const Navbar = () => {
             <Link 
               key={link.name} 
               href={link.href}
-              className={`text-[13px] font-bold uppercase tracking-widest transition-all duration-300 hover:text-[#73BB1B] ${
-                pathname === link.href ? 'text-[#73BB1B]' : 'text-white/80'
+              className={`text-[13px] font-bold uppercase tracking-widest transition-all duration-300 hover:text-red-600 ${
+                pathname === link.href ? 'text-red-600' : 'text-white/80'
               }`}
             >
               {link.name}
@@ -73,7 +73,7 @@ const Navbar = () => {
           
           <Link 
             href="/contact" 
-            className="px-8 py-3 font-black text-xs uppercase tracking-widest bg-[#73BB1B] text-white rounded-sm hover:bg-white hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(115,187,27,0.3)]"
+            className="px-8 py-3 font-black text-xs uppercase tracking-widest bg-red-600 text-white rounded-sm hover:bg-white hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(255,0,0,0.3)]"
           >
             Join Now
           </Link>
@@ -83,6 +83,7 @@ const Navbar = () => {
         <button 
           className="lg:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
           {isOpen ? <X size={35} /> : <Menu size={35} />}
         </button>
@@ -99,16 +100,16 @@ const Navbar = () => {
               href={link.href}
               onClick={() => setIsOpen(false)}
               className={`text-4xl font-black uppercase italic tracking-tighter flex items-center gap-4 ${
-                pathname === link.href ? 'text-[#73BB1B]' : 'text-white'
+                pathname === link.href ? 'text-red-600' : 'text-white'
               }`}
             >
-              {link.name} <ChevronRight size={30} className="text-[#73BB1B]" />
+              {link.name} <ChevronRight size={30} className="text-red-600" />
             </Link>
           ))}
           <Link 
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className="mt-6 bg-[#73BB1B] text-white px-10 py-4 font-black text-xl uppercase italic"
+            className="mt-6 bg-red-600 text-white px-10 py-4 font-black text-xl uppercase italic shadow-[0_0_20px_rgba(255,0,0,0.4)]"
           >
             GET STARTED
           </Link>
